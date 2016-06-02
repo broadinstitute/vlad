@@ -6,6 +6,7 @@ import org.junit.Test
 class VariantServiceTest {
     // instance variable
     VariantService variantService
+    static transactional = false
 
     @Test
     public void testLoad() {

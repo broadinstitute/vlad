@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: phenotypeInstance, field: 'description', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: phenotypeInstance, field: 'description', 'error')} ">
 	<label for="description">
 		<g:message code="phenotype.description.label" default="Description" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:textField name="description" required="" value="${phenotypeInstance?.description}"/>
+	<g:textField name="description" value="${phenotypeInstance?.description}"/>
 
 </div>
 

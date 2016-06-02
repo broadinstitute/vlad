@@ -23,38 +23,11 @@
 			</g:if>
 			<ol class="property-list variant">
 			
-				<g:if test="${variantInstance?.alternate}">
-				<li class="fieldcontain">
-					<span id="alternate-label" class="property-label"><g:message code="variant.alternate.label" default="Alternate" /></span>
-					
-						<span class="property-value" aria-labelledby="alternate-label"><g:fieldValue bean="${variantInstance}" field="alternate"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${variantInstance?.chromosome}">
 				<li class="fieldcontain">
 					<span id="chromosome-label" class="property-label"><g:message code="variant.chromosome.label" default="Chromosome" /></span>
 					
 						<span class="property-value" aria-labelledby="chromosome-label"><g:fieldValue bean="${variantInstance}" field="chromosome"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${variantInstance?.dbSnpId}">
-				<li class="fieldcontain">
-					<span id="dbSnpId-label" class="property-label"><g:message code="variant.dbSnpId.label" default="Db Snp Id" /></span>
-					
-						<span class="property-value" aria-labelledby="dbSnpId-label"><g:fieldValue bean="${variantInstance}" field="dbSnpId"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${variantInstance?.description}">
-				<li class="fieldcontain">
-					<span id="description-label" class="property-label"><g:message code="variant.description.label" default="Description" /></span>
-					
-						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${variantInstance}" field="description"/></span>
 					
 				</li>
 				</g:if>
@@ -73,6 +46,33 @@
 					<span id="reference-label" class="property-label"><g:message code="variant.reference.label" default="Reference" /></span>
 					
 						<span class="property-value" aria-labelledby="reference-label"><g:fieldValue bean="${variantInstance}" field="reference"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${variantInstance?.alternate}">
+				<li class="fieldcontain">
+					<span id="alternate-label" class="property-label"><g:message code="variant.alternate.label" default="Alternate" /></span>
+					
+						<span class="property-value" aria-labelledby="alternate-label"><g:fieldValue bean="${variantInstance}" field="alternate"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${variantInstance?.description}">
+				<li class="fieldcontain">
+					<span id="description-label" class="property-label"><g:message code="variant.description.label" default="Description" /></span>
+					
+						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${variantInstance}" field="description"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${variantInstance?.dbSnpId}">
+				<li class="fieldcontain">
+					<span id="dbSnpId-label" class="property-label"><g:message code="variant.dbSnpId.label" default="Db Snp Id" /></span>
+					
+						<span class="property-value" aria-labelledby="dbSnpId-label"><g:fieldValue bean="${variantInstance}" field="dbSnpId"/></span>
 					
 				</li>
 				</g:if>

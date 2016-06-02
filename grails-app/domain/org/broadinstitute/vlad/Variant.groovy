@@ -10,7 +10,16 @@ class Variant {
     String alternate
     String description
 
+    public String toString() {
+        return dbSnpId;
+    }
+
     static constraints = {
+        chromosome nullable: true
+        position nullable: true
+        reference nullable: true
+        alternate nullable: true
+        description nullable: true
     }
 
     static mapping = {

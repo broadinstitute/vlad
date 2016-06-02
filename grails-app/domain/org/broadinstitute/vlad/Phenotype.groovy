@@ -7,5 +7,10 @@ class Phenotype {
     String description
 
     static constraints = {
+        description nullable: true
+    }
+
+    public String toString() {
+        return name;
     }
 }
