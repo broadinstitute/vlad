@@ -24,17 +24,17 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="context" title="${message(code: 'variantPhenotypeAssociation.context.label', default: 'Context')}" />
-					
-						<g:sortableColumn property="gene" title="${message(code: 'variantPhenotypeAssociation.gene.label', default: 'Gene')}" />
-					
-						<g:sortableColumn property="pValue" title="${message(code: 'variantPhenotypeAssociation.pValue.label', default: 'P Value')}" />
-					
-						<th><g:message code="variantPhenotypeAssociation.phenotype.label" default="Phenotype" /></th>
-					
 						<g:sortableColumn property="pubMedId" title="${message(code: 'variantPhenotypeAssociation.pubMedId.label', default: 'Pub Med Id')}" />
 					
 						<g:sortableColumn property="study" title="${message(code: 'variantPhenotypeAssociation.study.label', default: 'Study')}" />
+					
+						<g:sortableColumn property="webLink" title="${message(code: 'variantPhenotypeAssociation.webLink.label', default: 'Web Link')}" />
+					
+						<g:sortableColumn property="gene" title="${message(code: 'variantPhenotypeAssociation.gene.label', default: 'Gene')}" />
+					
+						<g:sortableColumn property="context" title="${message(code: 'variantPhenotypeAssociation.context.label', default: 'Context')}" />
+					
+						<g:sortableColumn property="pValue" title="${message(code: 'variantPhenotypeAssociation.pValue.label', default: 'P Value')}" />
 					
 					</tr>
 				</thead>
@@ -42,17 +42,17 @@
 				<g:each in="${variantPhenotypeAssociationInstanceList}" status="i" var="variantPhenotypeAssociationInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${variantPhenotypeAssociationInstance.id}">${fieldValue(bean: variantPhenotypeAssociationInstance, field: "context")}</g:link></td>
+						<td><g:link action="show" id="${variantPhenotypeAssociationInstance.id}">${fieldValue(bean: variantPhenotypeAssociationInstance, field: "pubMedId")}</g:link></td>
+					
+						<td>${fieldValue(bean: variantPhenotypeAssociationInstance, field: "study")}</td>
+					
+						<td>${fieldValue(bean: variantPhenotypeAssociationInstance, field: "webLink")}</td>
 					
 						<td>${fieldValue(bean: variantPhenotypeAssociationInstance, field: "gene")}</td>
 					
+						<td>${fieldValue(bean: variantPhenotypeAssociationInstance, field: "context")}</td>
+					
 						<td>${fieldValue(bean: variantPhenotypeAssociationInstance, field: "pValue")}</td>
-					
-						<td>${fieldValue(bean: variantPhenotypeAssociationInstance, field: "phenotype")}</td>
-					
-						<td>${fieldValue(bean: variantPhenotypeAssociationInstance, field: "pubMedId")}</td>
-					
-						<td>${fieldValue(bean: variantPhenotypeAssociationInstance, field: "study")}</td>
 					
 					</tr>
 				</g:each>

@@ -27,7 +27,7 @@ environments {
 //            dbCreate = "validate"
 //            //dbCreate = "create"   /////////// caution!!
 //            driverClassName = "com.mysql.jdbc.Driver"
-            url = "jdbc:mysql://localhost/vlad?zeroDateTimeBehavior=convertToNull&useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:mysql://localhost/vlad2?zeroDateTimeBehavior=convertToNull&useUnicode=yes&characterEncoding=UTF-8"
 //            url =  "jdbc:mysql://localhost:3306/vlad?user=root&password=yoyoma";
         }
     }
@@ -44,7 +44,7 @@ environments {
 //            dbCreate = "validate"
 //            //dbCreate = "create"   /////////// caution!!
 //            driverClassName = "com.mysql.jdbc.Driver"
-            url = "jdbc:mysql://localhost/vlad?zeroDateTimeBehavior=convertToNull&useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:mysql://localhost/vlad2?zeroDateTimeBehavior=convertToNull&useUnicode=yes&characterEncoding=UTF-8"
 //            url =  "jdbc:mysql://localhost:3306/vlad?user=root&password=yoyoma";
         }
     }

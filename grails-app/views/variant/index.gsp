@@ -24,17 +24,17 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="alternate" title="${message(code: 'variant.alternate.label', default: 'Alternate')}" />
-					
 						<g:sortableColumn property="chromosome" title="${message(code: 'variant.chromosome.label', default: 'Chromosome')}" />
-					
-						<g:sortableColumn property="dbSnpId" title="${message(code: 'variant.dbSnpId.label', default: 'Db Snp Id')}" />
-					
-						<g:sortableColumn property="description" title="${message(code: 'variant.description.label', default: 'Description')}" />
 					
 						<g:sortableColumn property="position" title="${message(code: 'variant.position.label', default: 'Position')}" />
 					
 						<g:sortableColumn property="reference" title="${message(code: 'variant.reference.label', default: 'Reference')}" />
+					
+						<g:sortableColumn property="alternate" title="${message(code: 'variant.alternate.label', default: 'Alternate')}" />
+					
+						<g:sortableColumn property="description" title="${message(code: 'variant.description.label', default: 'Description')}" />
+					
+						<g:sortableColumn property="dbSnpId" title="${message(code: 'variant.dbSnpId.label', default: 'Db Snp Id')}" />
 					
 					</tr>
 				</thead>
@@ -42,17 +42,17 @@
 				<g:each in="${variantInstanceList}" status="i" var="variantInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${variantInstance.id}">${fieldValue(bean: variantInstance, field: "alternate")}</g:link></td>
-					
-						<td>${fieldValue(bean: variantInstance, field: "chromosome")}</td>
-					
-						<td>${fieldValue(bean: variantInstance, field: "dbSnpId")}</td>
-					
-						<td>${fieldValue(bean: variantInstance, field: "description")}</td>
+						<td><g:link action="show" id="${variantInstance.id}">${fieldValue(bean: variantInstance, field: "chromosome")}</g:link></td>
 					
 						<td>${fieldValue(bean: variantInstance, field: "position")}</td>
 					
 						<td>${fieldValue(bean: variantInstance, field: "reference")}</td>
+					
+						<td>${fieldValue(bean: variantInstance, field: "alternate")}</td>
+					
+						<td>${fieldValue(bean: variantInstance, field: "description")}</td>
+					
+						<td>${fieldValue(bean: variantInstance, field: "dbSnpId")}</td>
 					
 					</tr>
 				</g:each>

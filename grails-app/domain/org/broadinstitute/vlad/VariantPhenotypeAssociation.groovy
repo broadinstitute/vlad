@@ -13,5 +13,10 @@ class VariantPhenotypeAssociation {
     String context
 
     static constraints = {
+        pubMedId nullable: true
+        study nullable: true
+        webLink nullable: true
+        gene nullable: true
+        context nullable: true
     }
 }

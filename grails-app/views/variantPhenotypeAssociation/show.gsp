@@ -23,11 +23,29 @@
 			</g:if>
 			<ol class="property-list variantPhenotypeAssociation">
 			
-				<g:if test="${variantPhenotypeAssociationInstance?.context}">
+				<g:if test="${variantPhenotypeAssociationInstance?.pubMedId}">
 				<li class="fieldcontain">
-					<span id="context-label" class="property-label"><g:message code="variantPhenotypeAssociation.context.label" default="Context" /></span>
+					<span id="pubMedId-label" class="property-label"><g:message code="variantPhenotypeAssociation.pubMedId.label" default="Pub Med Id" /></span>
 					
-						<span class="property-value" aria-labelledby="context-label"><g:fieldValue bean="${variantPhenotypeAssociationInstance}" field="context"/></span>
+						<span class="property-value" aria-labelledby="pubMedId-label"><g:fieldValue bean="${variantPhenotypeAssociationInstance}" field="pubMedId"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${variantPhenotypeAssociationInstance?.study}">
+				<li class="fieldcontain">
+					<span id="study-label" class="property-label"><g:message code="variantPhenotypeAssociation.study.label" default="Study" /></span>
+					
+						<span class="property-value" aria-labelledby="study-label"><g:fieldValue bean="${variantPhenotypeAssociationInstance}" field="study"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${variantPhenotypeAssociationInstance?.webLink}">
+				<li class="fieldcontain">
+					<span id="webLink-label" class="property-label"><g:message code="variantPhenotypeAssociation.webLink.label" default="Web Link" /></span>
+					
+						<span class="property-value" aria-labelledby="webLink-label"><g:fieldValue bean="${variantPhenotypeAssociationInstance}" field="webLink"/></span>
 					
 				</li>
 				</g:if>
@@ -37,6 +55,15 @@
 					<span id="gene-label" class="property-label"><g:message code="variantPhenotypeAssociation.gene.label" default="Gene" /></span>
 					
 						<span class="property-value" aria-labelledby="gene-label"><g:fieldValue bean="${variantPhenotypeAssociationInstance}" field="gene"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${variantPhenotypeAssociationInstance?.context}">
+				<li class="fieldcontain">
+					<span id="context-label" class="property-label"><g:message code="variantPhenotypeAssociation.context.label" default="Context" /></span>
+					
+						<span class="property-value" aria-labelledby="context-label"><g:fieldValue bean="${variantPhenotypeAssociationInstance}" field="context"/></span>
 					
 				</li>
 				</g:if>
@@ -59,38 +86,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${variantPhenotypeAssociationInstance?.pubMedId}">
-				<li class="fieldcontain">
-					<span id="pubMedId-label" class="property-label"><g:message code="variantPhenotypeAssociation.pubMedId.label" default="Pub Med Id" /></span>
-					
-						<span class="property-value" aria-labelledby="pubMedId-label"><g:fieldValue bean="${variantPhenotypeAssociationInstance}" field="pubMedId"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${variantPhenotypeAssociationInstance?.study}">
-				<li class="fieldcontain">
-					<span id="study-label" class="property-label"><g:message code="variantPhenotypeAssociation.study.label" default="Study" /></span>
-					
-						<span class="property-value" aria-labelledby="study-label"><g:fieldValue bean="${variantPhenotypeAssociationInstance}" field="study"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${variantPhenotypeAssociationInstance?.variant}">
 				<li class="fieldcontain">
 					<span id="variant-label" class="property-label"><g:message code="variantPhenotypeAssociation.variant.label" default="Variant" /></span>
 					
 						<span class="property-value" aria-labelledby="variant-label"><g:link controller="variant" action="show" id="${variantPhenotypeAssociationInstance?.variant?.id}">${variantPhenotypeAssociationInstance?.variant?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${variantPhenotypeAssociationInstance?.webLink}">
-				<li class="fieldcontain">
-					<span id="webLink-label" class="property-label"><g:message code="variantPhenotypeAssociation.webLink.label" default="Web Link" /></span>
-					
-						<span class="property-value" aria-labelledby="webLink-label"><g:fieldValue bean="${variantPhenotypeAssociationInstance}" field="webLink"/></span>
 					
 				</li>
 				</g:if>
