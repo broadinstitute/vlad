@@ -18,7 +18,7 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create" // one of 'create', 'create-drop', 'update', 'validate', ''
+            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
 //            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
 //            username = System.getProperty("root")
 //            password = System.getProperty("yoyoma")
@@ -27,13 +27,25 @@ environments {
 //            dbCreate = "validate"
 //            //dbCreate = "create"   /////////// caution!!
 //            driverClassName = "com.mysql.jdbc.Driver"
-            url =  "jdbc:mysql://localhost:3306/vlad?user=root&password=yoyoma";
+            url = "jdbc:mysql://localhost/vlad?zeroDateTimeBehavior=convertToNull&useUnicode=yes&characterEncoding=UTF-8"
+//            url =  "jdbc:mysql://localhost:3306/vlad?user=root&password=yoyoma";
         }
     }
     test {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+//            dbCreate = "update"
+//            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+//            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+//            username = System.getProperty("root")
+//            password = System.getProperty("yoyoma")
+//            pooled = true
+//            //dbCreate = "validate"
+//            dbCreate = "validate"
+//            //dbCreate = "create"   /////////// caution!!
+//            driverClassName = "com.mysql.jdbc.Driver"
+            url = "jdbc:mysql://localhost/vlad?zeroDateTimeBehavior=convertToNull&useUnicode=yes&characterEncoding=UTF-8"
+//            url =  "jdbc:mysql://localhost:3306/vlad?user=root&password=yoyoma";
         }
     }
     production {
