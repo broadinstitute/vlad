@@ -1,9 +1,9 @@
 dataSource {
-    pooled = true
-    jmxExport = true
-    driverClassName = "org.h2.Driver"
-    username = "sa"
-    password = ""
+//    pooled = true
+//    jmxExport = true
+    driverClassName = "com.mysql.jdbc.Driver"
+    username = "root"
+    password = "yoyoma"
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -18,8 +18,16 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            dbCreate = "create" // one of 'create', 'create-drop', 'update', 'validate', ''
+//            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+//            username = System.getProperty("root")
+//            password = System.getProperty("yoyoma")
+//            pooled = true
+//            //dbCreate = "validate"
+//            dbCreate = "validate"
+//            //dbCreate = "create"   /////////// caution!!
+//            driverClassName = "com.mysql.jdbc.Driver"
+            url =  "jdbc:mysql://localhost:3306/vlad?user=root&password=yoyoma";
         }
     }
     test {
