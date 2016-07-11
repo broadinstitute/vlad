@@ -5,8 +5,8 @@ import grails.transaction.Transactional
 @Transactional
 class VariantService {
 
-    @Transactional
-    def saveVariantAssociation(String dbSnpId, String pheno, Float pValue) {
+    @org.springframework.transaction.annotation.Transactional
+    def saveVariantAssociation(String dbSnpId, String pheno, Float pValue, Integer pubMedId, String mappedGene) {
         // local variables
         log.info("saving association: " + dbSnpId + " - " + pheno + ": " + pValue);
 
@@ -32,7 +32,47 @@ class VariantService {
         VariantPhenotypeAssociation variantPhenotypeAssociation = new VariantPhenotypeAssociation();
         variantPhenotypeAssociation.variant = variant;
         variantPhenotypeAssociation.phenotype = phenotype;
-        variantPhenotypeAssociation.pValue = pValue
-        variantPhenotypeAssociation.save(flush: true)
+        variantPhenotypeAssociation.pValue = pValue;
+        variantPhenotypeAssociation.pubMedId = pubMedId;
+        variantPhenotypeAssociation.gene = mappedGene;
+        variantPhenotypeAssociation.save(flush: true);
+    }
+
+    @org.springframework.transaction.annotation.Transactional
+    def saveVariantLinkage(VariantLinkage variantLinkage) {
+        // log
+        log.info("saving linkage: " + variantLinkage.toString());
+
+        variantLinkage.save(flush: true);
+    }
+
+    public List<VariantLinkageBean> getLinkageBeans() {
+        // local variables
+        List<VariantLinkageBean> beanList = new ArrayList<VariantLinkageBean>();
+
+        // stub data for now
+        beanList.add(new VariantLinkageBean("rs7626795", 0.71));
+        beanList.add(new VariantLinkageBean("rs16892766", 0.54));
+        beanList.add(new VariantLinkageBean("rs12779790", 0.89));
+        beanList.add(new VariantLinkageBean("rs7961581", 0.32));
+        beanList.add(new VariantLinkageBean("rs2180341", 0.67));
+
+        return beanList;
+
+    }
+
+    public List<AssociationDisplayBean> getAssociationBeanList() {
+        // local variables
+        List<AssociationDisplayBean> beanList = new ArrayList<AssociationDisplayBean>();
+        List<VariantLinkageBean> variantLinkageList = this.getLinkageBeans();
+
+        // get the linkage list
+        for (VariantLinkageBean bean : variantLinkageList) {
+            AssociationDisplayBean
+        }
+        // for each, get the db variant information
+
+        // return
+
     }
 }
